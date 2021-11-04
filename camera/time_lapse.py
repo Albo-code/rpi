@@ -8,8 +8,12 @@ To create Python venv in which to run use:
     source venv/bin/activate
     pip install picamera
 '''
+# Standard imports
 import argparse
+from pathlib import Path
 from time import sleep
+
+# 3rd party imports
 import picamera
 
 def time_lapse(wait_time: int, dir_name: str) -> None:
@@ -41,6 +45,10 @@ def main() -> None:
                         default='/home/pi/time-lapse/raw/',
                         help="Name of directory to store images")
     args = parser.parse_args()
+
+    if not Path(args.dir).is_dir():
+        raise RuntimeError(f"Directory does not exist: {args.dir}")
+
     time_lapse(args.wait, args.dir)
 
 if __name__ == '__main__':
