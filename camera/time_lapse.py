@@ -46,16 +46,19 @@ def main() -> None:
                     example: time_lapse.py -w 10 -d ~/time_lapse/raw
                     '''))
     parser.add_argument('-w', '--wait', type=int, action='store', default=30,
-                        help="Wait time between captures in seconds. " + 
+                        help="wait time between captures in seconds. " + 
                              "Default: 30")
     parser.add_argument('-d', '--dir', type=str, action='store',
                         default='/home/pi/time-lapse/raw/',
-                        help="Name of directory to store images. " +
+                        help="name of directory to store images. " +
                              "Default: /home/pi/time-lapse/raw/")
     args = parser.parse_args()
 
+    if args.wait <= 0:
+        raise RuntimeError(f"Wait arg must be positive: {args.wait}")
+
     if not Path(args.dir).is_dir():
-        raise RuntimeError(f"Directory does not exist: {args.dir}")
+        raise RuntimeError(f"Directory arg does not exist: {args.dir}")
 
     time_lapse(args.wait, args.dir)
 
