@@ -10,6 +10,7 @@ To create Python venv in which to run use:
 '''
 # Standard imports
 import argparse
+import textwrap
 from pathlib import Path
 from time import sleep
 
@@ -38,12 +39,19 @@ def main() -> None:
     '''
     Parse command line arguments and pass to :func:`time_lapse.time_lapse`.
     '''
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+                formatter_class=argparse.RawDescriptionHelpFormatter,
+                description=textwrap.dedent(
+                    '''
+                    example: time_lapse.py -w 10 -d ~/time_lapse/raw
+                    '''))
     parser.add_argument('-w', '--wait', type=int, action='store', default=30,
-                        help="Wait time between captures in seconds")
+                        help="Wait time between captures in seconds. " + 
+                             "Default: 30")
     parser.add_argument('-d', '--dir', type=str, action='store',
                         default='/home/pi/time-lapse/raw/',
-                        help="Name of directory to store images")
+                        help="Name of directory to store images. " +
+                             "Default: /home/pi/time-lapse/raw/")
     args = parser.parse_args()
 
     if not Path(args.dir).is_dir():
