@@ -1,16 +1,17 @@
 '''
-Time lapse script accepting various arguments to determine how time lapse
+Time lapse script accepting various arguments to control how time lapse
 images are to be captured and where they are to be stored.
 
-To create Python venv in which to run use:
+To create Python venv in which to run use::
 
     python3 -m venv venv
     source venv/bin/activate
     pip install picamera
+
 '''
 # Standard imports
-import argparse
 import textwrap
+from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from pathlib import Path
 from time import sleep
 
@@ -19,11 +20,11 @@ import picamera
 
 def time_lapse(wait_time: int, dir_name: str) -> None:
     '''
-    Capture images by calling the :func:`picamera.PiCamera.capture_continuous()
-    function in loop with delay.
+    Capture images by calling :meth:`picamera.PiCamera.capture_continuous`
+    in loop with specified delay.
 
     :param wait_time: Time in seconds to delay between calls to
-        `capture_continous()`
+        :meth:`picamera.PiCamera.capture_continous`
     :type wait_time: int
     :param dir_name: Name of directory where captured images are to be stored
     :type dir_name: str
@@ -39,14 +40,13 @@ def main() -> None:
     '''
     Parse command line arguments and pass to :func:`time_lapse.time_lapse`.
     '''
-    parser = argparse.ArgumentParser(
-                formatter_class=argparse.RawDescriptionHelpFormatter,
-                description=textwrap.dedent(
-                    '''
-                    example: time_lapse.py -w 10 -d ~/time_lapse/raw
-                    '''))
+    parser = ArgumentParser(formatter_class=RawDescriptionHelpFormatter,
+                            description=textwrap.dedent(
+                            '''
+                            example: time_lapse.py -w 10 -d ~/time_lapse/raw
+                            '''))
     parser.add_argument('-w', '--wait', type=int, action='store', default=30,
-                        help="wait time between captures in seconds. " + 
+                        help="wait time between captures in seconds. " +
                              "Default: 30")
     parser.add_argument('-d', '--dir', type=str, action='store',
                         default='/home/pi/time-lapse/raw/',

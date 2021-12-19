@@ -14,16 +14,16 @@ capture_output: str = '/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.j
     seconds. I.e. delay is adjusted by how long it takes for image capture so
     that absolute time taken is the given wait time, **not** time taken to
     capture image **+** wait time.
-    :param camera: The camera object on which `capture_continuous` is called.
+
+    :param camera: The camera object on which ``capture_continuous`` is called.
     :type camera: picamera.PiCamera
     :param wait: Absolute time in seconds that this function is to take to
-                execute
+        execute
     :type wait: int
-    :param capture_output: Value to pass as `output` parameter to
-                `picamera.PiCamera.capture_continuous`. Default:
-                `/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg`
+    :param capture_output: Value to pass as ``output`` parameter to
+        :meth:`picamera.PiCamera.capture_continuous`. Default:
+        ``/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg``
     :type capture_output: str
-    :return: None
     '''
     # Calculate the delay to the start of the next exposure
     next_exp = (datetime.now() + timedelta(seconds=wait)).replace(microsecond=0)
