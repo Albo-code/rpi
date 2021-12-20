@@ -51,6 +51,13 @@ exclude_patterns = []
 #
 html_theme = 'sphinx_rtd_theme'
 
+# If given, this must be the name of an image file (path relative to the
+# configuration directory) that is the favicon of the docs, or URL that points
+# an image file for the favicon. Modern browsers use this as the icon for tabs,
+# windows and bookmarks. It should be a Windows-style icon file (.ico), which
+# is 16x16 or 32x32 pixels large. Default: None.
+html_favicon = 'raspberrypi_favicon.ico'
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
