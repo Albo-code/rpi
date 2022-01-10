@@ -86,5 +86,4 @@ def linkcode_resolve(domain, info):
     if not info['module']:
         return None
     filename = info['module'].replace('.', '/')
-    print(f"domin={domain}, info={info}")
     return f"{LINKCODE_REPO_URL}/{LINKCODE_REPO_BRANCH}/{filename}.py"
