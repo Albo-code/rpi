@@ -74,8 +74,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-time_lapse">
-<span id="time-lapse-module"></span><h1>time_lapse module<a class="headerlink" href="#module-time_lapse" title="Permalink to this headline"></a></h1>
+  <section id="module-camera.time_lapse">
+<span id="time-lapse-module"></span><h1>time_lapse module<a class="headerlink" href="#module-camera.time_lapse" title="Permalink to this headline"></a></h1>
 <p>Time lapse script accepting various arguments to control how time lapse
 images are to be captured and where they are to be stored.</p>
 <p>To create Python venv in which to run use:</p>
@@ -85,14 +85,14 @@ images are to be captured and where they are to be stored.</p>
 </pre></div>
 </div>
 <dl class="py function">
-<dt class="sig sig-object py" id="time_lapse.main">
-<span class="sig-prename descclassname"><span class="pre">time_lapse.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#time_lapse.main" title="Permalink to this definition"></a></dt>
-<dd><p>Parse command line arguments and pass to <a class="reference internal" href="#time_lapse.time_lapse" title="time_lapse.time_lapse"><code class="xref py py-func docutils literal notranslate"><span class="pre">time_lapse.time_lapse()</span></code></a>.</p>
+<dt class="sig sig-object py" id="camera.time_lapse.main">
+<span class="sig-prename descclassname"><span class="pre">camera.time_lapse.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/Albo-code/rpi/tree/InitialCamDev/camera/time_lapse.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#camera.time_lapse.main" title="Permalink to this definition"></a></dt>
+<dd><p>Parse command line arguments and pass to <code class="xref py py-func docutils literal notranslate"><span class="pre">time_lapse.time_lapse()</span></code>.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="time_lapse.time_lapse">
-<span class="sig-prename descclassname"><span class="pre">time_lapse.</span></span><span class="sig-name descname"><span class="pre">time_lapse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#time_lapse.time_lapse" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="camera.time_lapse.time_lapse">
+<span class="sig-prename descclassname"><span class="pre">camera.time_lapse.</span></span><span class="sig-name descname"><span class="pre">time_lapse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/Albo-code/rpi/tree/InitialCamDev/camera/time_lapse.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#camera.time_lapse.time_lapse" title="Permalink to this definition"></a></dt>
 <dd><p>Capture images by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">picamera.PiCamera.capture_continuous()</span></code>
 in loop with specified delay.</p>
 <dl class="field-list simple">

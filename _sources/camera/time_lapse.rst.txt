@@ -1,7 +1,7 @@
 time\_lapse module
 ==================
 
-.. automodule:: time_lapse
+.. automodule:: camera.time_lapse
    :members:
    :undoc-members:
    :show-inheritance:

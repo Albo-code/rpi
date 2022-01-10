@@ -74,8 +74,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-time_lapse_simple">
-<span id="time-lapse-simple-module"></span><h1>time_lapse_simple module<a class="headerlink" href="#module-time_lapse_simple" title="Permalink to this headline"></a></h1>
+  <section id="module-camera.time_lapse_simple">
+<span id="time-lapse-simple-module"></span><h1>time_lapse_simple module<a class="headerlink" href="#module-camera.time_lapse_simple" title="Permalink to this headline"></a></h1>
 <p>Simple time lapse script obtained from
 <a class="reference external" href="https://projects.raspberrypi.org/en/projects/raspberry-pi-zero-time-lapse-cam">https://projects.raspberrypi.org/en/projects/raspberry-pi-zero-time-lapse-cam</a></p>
 <p>Modified to create image files with name containing date (not just time).</p>
@@ -86,8 +86,8 @@
 </pre></div>
 </div>
 <dl class="py function">
-<dt class="sig sig-object py" id="time_lapse_simple.main">
-<span class="sig-prename descclassname"><span class="pre">time_lapse_simple.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#time_lapse_simple.main" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="camera.time_lapse_simple.main">
+<span class="sig-prename descclassname"><span class="pre">camera.time_lapse_simple.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/Albo-code/rpi/tree/InitialCamDev/camera/time_lapse_simple.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#camera.time_lapse_simple.main" title="Permalink to this definition"></a></dt>
 <dd><p>Entry function for <code class="docutils literal notranslate"><span class="pre">time_lapse_simple</span></code>. Calls
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">picamera.PiCamera.capture_continuous()</span></code> in loop with fixed delay.
 Captured images are stored in directory <code class="docutils literal notranslate"><span class="pre">/home/pi/time-lapse</span></code>.</p>
