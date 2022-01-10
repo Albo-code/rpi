@@ -12,7 +12,8 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('./../../camera'))
+sys.path.insert(0, os.path.abspath('./../../'))
+sys.path.insert(1, os.path.abspath('./../../camera'))
 
 
 # -- Project information -----------------------------------------------------
@@ -32,7 +33,8 @@ release = '0.1'
 # ones.
 extensions = [
     'sphinx_rtd_theme',
-    'sphinx.ext.autodoc'
+    'sphinx.ext.autodoc',
+    'sphinx.ext.linkcode'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -69,4 +71,20 @@ html_favicon = 'raspberrypi_favicon.ico'
 # some external dependencies are not met at build time and break the building
 # process. You may only specify the root package of the dependencies themselves
 # and omit the sub-modules:
-autodoc_mock_imports = ["picamera"]
+autodoc_mock_imports = ['picamera']
+
+# -- sphinx.ext.linkcode
+# See https://www.sphinx-doc.org/en/master/usage/extensions/linkcode.html
+
+LINKCODE_REPO_URL = 'https://github.com/Albo-code/rpi/tree'
+# Update following to "main" when initial branch merged
+LINKCODE_REPO_BRANCH = 'InitialCamDev'
+
+def linkcode_resolve(domain, info):
+    if domain != 'py':
+        return None
+    if not info['module']:
+        return None
+    filename = info['module'].replace('.', '/')
+    print(f"domin={domain}, info={info}")
+    return f"{LINKCODE_REPO_URL}/{LINKCODE_REPO_BRANCH}/{filename}.py"
