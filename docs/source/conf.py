@@ -50,8 +50,12 @@ exclude_patterns = []
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
 html_theme = 'sphinx_rtd_theme'
+
+#If this is not None, a ‘Last updated on:’ timestamp is inserted at every page
+# bottom, using the given strftime() format. The empty string is equivalent to
+# '%b %d, %Y' (or a locale-dependent equivalent).
+html_last_updated_fmt = '%A %d %b %Y at %H:%M:%S'
 
 # If given, this must be the name of an image file (path relative to the
 # configuration directory) that is the favicon of the docs, or URL that points
