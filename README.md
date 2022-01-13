@@ -1,5 +1,5 @@
 # rpi
-Code developed for the Raspberry Pi.
+Code developed for the [Raspberry Pi](https://www.raspberrypi.org/).
 
 [Documentation](https://albo-code.github.io/rpi/index.html)
 

@@ -2,9 +2,9 @@ name: docs
 on:
   push:
     branches:
-#    - master
+    - master
 #    - InitialCamDev
-    - Cam1
+#    - Cam1
 
 jobs:
   docs:
