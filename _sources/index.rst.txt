@@ -9,7 +9,7 @@ rpi documentation
    :maxdepth: 2
    :caption: Contents:
 
-   camera/camera.rst
+   camera1/camera1.rst
 
 Indices and tables
 ==================
