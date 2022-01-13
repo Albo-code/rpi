@@ -3,7 +3,8 @@ on:
   push:
     branches:
 #    - master
-    - InitialCamDev
+#    - InitialCamDev
+    - Cam1
 
 jobs:
   docs:
