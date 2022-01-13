@@ -2,6 +2,7 @@ name: docs
 on:
   push:
     branches:
+# NB when this is modified ALSO modify LINKCODE_REPO_BRANCH in docs/conf.py
     - main
 #    - InitialCamDev
 #    - Cam1

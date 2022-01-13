@@ -81,8 +81,8 @@ autodoc_mock_imports = ['picamera']
 # See https://www.sphinx-doc.org/en/master/usage/extensions/linkcode.html
 
 LINKCODE_REPO_URL = 'https://github.com/Albo-code/rpi/tree'
-# Update following to "main" when initial branch merged
-LINKCODE_REPO_BRANCH = 'InitialCamDev'
+# Update following to point to branch containing source that is to be linked to
+LINKCODE_REPO_BRANCH = 'main'
 
 def linkcode_resolve(domain, info):
     if domain != 'py':
