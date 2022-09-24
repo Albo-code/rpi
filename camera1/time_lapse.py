@@ -49,9 +49,9 @@ def main() -> None:
                         help="wait time between captures in seconds. " +
                              "Default: 30")
     parser.add_argument('-d', '--dir', type=str, action='store',
-                        default='/home/pi/time-lapse/raw/',
+                        default='/home/pi/time-lapse/raw',
                         help="name of directory to store images. " +
-                             "Default: /home/pi/time-lapse/raw/")
+                             "Default: /home/pi/time-lapse/raw")
     args = parser.parse_args()
 
     if args.wait <= 0:

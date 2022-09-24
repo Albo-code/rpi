@@ -7,8 +7,8 @@ from time import sleep
 import picamera
 
 def caputure_continuous_wait_absolute(camera: picamera.PiCamera, wait: int,
-capture_output: str = '/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg'
-) -> None:
+capture_output: str = '/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg',
+do_print_file_name: bool = False) -> None:
     '''
     Capture image and delay so that total time to execute is given `wait` of
     seconds. I.e. delay is adjusted by how long it takes for image capture so
@@ -24,10 +24,22 @@ capture_output: str = '/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.j
         :meth:`picamera.PiCamera.capture_continuous`. Default:
         ``/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg``
     :type capture_output: str
+    :param do_print_file_name: When ``True`` print to stdout the name of capture
+        output file when created. Default ``False``.
+    :type do_print_file_name: bool
     '''
-    # Calculate the delay to the start of the next exposure
+    # Calculate the time the 1st time lapse is to end
     next_exp = (datetime.now() + timedelta(seconds=wait)).replace(microsecond=0)
-    camera.capture_continuous(capture_output)
-    delay = (next_exp - datetime.now()).seconds
-    sleep(delay)
+
+    for filename in camera.capture_continuous(capture_output):
+        if do_print_file_name:
+            print(filename)
+
+        # Calculate the delay until the end of current time lapse
+        delay = (next_exp - datetime.now()).total_seconds()
+        sleep(delay)
+
+        # Calculate the time next time lapse is to end
+        next_exp = (datetime.now() + timedelta(seconds=wait)).replace(microsecond=0)
+
 # end caputure_wait_absolute()
