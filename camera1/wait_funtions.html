@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -43,7 +45,10 @@
 <li class="toctree-l2"><a class="reference internal" href="time_lapse.html">time_lapse module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time_lapse_simple.html">time_lapse_simple module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time_lapse_wait_abs.html">time_lapse_wait_abs module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wait_funtions module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wait_funtions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#camera1.wait_funtions.caputure_continuous_wait_absolute"><code class="docutils literal notranslate"><span class="pre">caputure_continuous_wait_absolute()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -73,12 +78,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-camera1.wait_funtions">
-<span id="wait-funtions-module"></span><h1>wait_funtions module<a class="headerlink" href="#module-camera1.wait_funtions" title="Permalink to this headline"></a></h1>
+  <section id="wait-funtions-module">
+<h1>wait_funtions module<a class="headerlink" href="#wait-funtions-module" title="Permalink to this heading"></a></h1>
 <p>Various wait functions to be used with time lapse scripts.</p>
-<dl class="py function">
+<span class="target" id="module-camera1.wait_funtions"></span><dl class="py function">
 <dt class="sig sig-object py" id="camera1.wait_funtions.caputure_continuous_wait_absolute">
-<span class="sig-prename descclassname"><span class="pre">camera1.wait_funtions.</span></span><span class="sig-name descname"><span class="pre">caputure_continuous_wait_absolute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">picamera.PiCamera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capture_output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/Albo-code/rpi/tree/main/camera1/wait_funtions.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#camera1.wait_funtions.caputure_continuous_wait_absolute" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">camera1.wait_funtions.</span></span><span class="sig-name descname"><span class="pre">caputure_continuous_wait_absolute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">picamera.PiCamera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capture_output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_sync_with_period</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/Albo-code/rpi/tree/main/camera1/wait_funtions.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#camera1.wait_funtions.caputure_continuous_wait_absolute" title="Permalink to this definition"></a></dt>
 <dd><p>Capture image and delay so that total time to execute is given <cite>wait</cite> of
 seconds. I.e. delay is adjusted by how long it takes for image capture so
 that absolute time taken is the given wait time, <strong>not</strong> time taken to
@@ -92,6 +97,12 @@ execute</p></li>
 <li><p><strong>capture_output</strong> (<em>str</em>) – Value to pass as <code class="docutils literal notranslate"><span class="pre">output</span></code> parameter to
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">picamera.PiCamera.capture_continuous()</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">/home/pi/time-lapse/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg</span></code></p></li>
+<li><p><strong>do_sync_with_period</strong> (<em>bool</em>) – When <code class="docutils literal notranslate"><span class="pre">True</span></code> delay starting time lapse until the
+current time is a factor of the current wait period, e.g. if wait is
+5 seconds, the first image will not be taken until the current time is
+0, 5, 10, 15, …, etc. seconds past the minute. Default <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><strong>do_print_file_name</strong> (<em>bool</em>) – When <code class="docutils literal notranslate"><span class="pre">True</span></code> print to stdout the name of capture
+output file when created. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -110,7 +121,7 @@ execute</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2021, Albo-code.
-      <span class="lastupdated">Last updated on Thursday 13 Jan 2022 at 21:11:50.
+      <span class="lastupdated">Last updated on Sunday 25 Sep 2022 at 20:56:59.
       </span></p>
   </div>
 

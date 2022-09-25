@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -41,7 +43,11 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="camera1.html">camera1</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">time_lapse module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">time_lapse module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#camera1.time_lapse.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#camera1.time_lapse.time_lapse"><code class="docutils literal notranslate"><span class="pre">time_lapse()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="time_lapse_simple.html">time_lapse_simple module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time_lapse_wait_abs.html">time_lapse_wait_abs module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wait_funtions.html">wait_funtions module</a></li>
@@ -74,8 +80,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-camera1.time_lapse">
-<span id="time-lapse-module"></span><h1>time_lapse module<a class="headerlink" href="#module-camera1.time_lapse" title="Permalink to this headline"></a></h1>
+  <section id="time-lapse-module">
+<h1>time_lapse module<a class="headerlink" href="#time-lapse-module" title="Permalink to this heading"></a></h1>
 <p>Time lapse script accepting various arguments to control how time lapse
 images are to be captured and where they are to be stored.</p>
 <p>To create Python venv in which to run use:</p>
@@ -84,7 +90,7 @@ images are to be captured and where they are to be stored.</p>
 <span class="n">pip</span> <span class="n">install</span> <span class="n">picamera</span>
 </pre></div>
 </div>
-<dl class="py function">
+<span class="target" id="module-camera1.time_lapse"></span><dl class="py function">
 <dt class="sig sig-object py" id="camera1.time_lapse.main">
 <span class="sig-prename descclassname"><span class="pre">camera1.time_lapse.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/Albo-code/rpi/tree/main/camera1/time_lapse.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#camera1.time_lapse.main" title="Permalink to this definition"></a></dt>
 <dd><p>Parse command line arguments and pass to <code class="xref py py-func docutils literal notranslate"><span class="pre">time_lapse.time_lapse()</span></code>.</p>
@@ -120,7 +126,7 @@ in loop with specified delay.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2021, Albo-code.
-      <span class="lastupdated">Last updated on Thursday 13 Jan 2022 at 21:11:50.
+      <span class="lastupdated">Last updated on Sunday 25 Sep 2022 at 20:56:59.
       </span></p>
   </div>
 
