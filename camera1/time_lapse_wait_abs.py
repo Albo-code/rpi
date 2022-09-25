@@ -32,7 +32,7 @@ def time_lapse(wait_time: int, dir_name: str) -> None:
     with picamera.PiCamera() as my_camera:
         my_camera.resolution = (1024, 768)
         caputure_continuous_wait_absolute(my_camera, wait_time,
-            dir_name + '/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg', True)
+            dir_name + '/img{timestamp:%Y-%m-%dT%H-%M-%S-%f}.jpg', True, True)
 
 def main() -> None:
     '''
